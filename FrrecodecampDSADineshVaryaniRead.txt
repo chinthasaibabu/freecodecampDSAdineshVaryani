@@ -1,2 +1,400 @@
 FREECODECAMP DSA DINESH VARYANI 200224 474616
 ---------------------------------------------
+DSA JAVA WITH VISUALIZATIONS
+----------------------------
+SINGLY LINKED LIST
+
+DOUBLY LINKED LIST
+
+CIRCULAR LINKED LIST
+
+ARRAYS
+
+STACKS
+
+QUEUES
+
+BINARY TREE
+
+BINARY HEAPS
+
+GRAPHS
+
+MATRIX
+
+TRIES
+
+and its IMPLEMENTATIONS (coding and algorithms)
+
+
+
+
+
+
+
+Data Structures
+---------------
+it is a way to organize data
+
+after organizing data it becomes easy to process it (Unorganized library books - cant find particular book)
+
+organize the books in shelf 
+
+
+
+Types of Data Structures
+------------------------
+        Linear (Data Elements arranged in sequential manner each element connected to its previous and next element)
+
+        Non Linear (not in sequence)
+
+
+
+
+
+Linear
+------
+Data Elements arranged in sequential manner each element connected to its previous and next element
+
+sequential connection easy to traverse them
+
+traversal is in single level
+
+easy to implement because to store in sequential
+
+        Array
+        Linked List
+        Stack
+        Queue
+
+
+
+
+
+
+Non Linear
+----------
+Data elements are non sequence
+
+basically connected one another two different parts
+
+stored in multilevel
+
+traversal time is more and difficult
+
+        Tree
+        Graph
+
+
+
+
+
+
+
+
+Introduction to Algorithms
+--------------------------
+an algorithm is a set of instructions to perform a task or to solve a given problem
+
+a recipe book (set of instructions to cook recipe)
+
+        boil water
+        put tea in tea point
+        add hot water
+        put hot tea into tea cups
+        add sugar
+        stir drink and enjoy
+
+
+
+print average of 3 given numbers
+
+        perform sum of 3 numbers
+        store into a variables
+        divide the sum by 3
+        store value in variable avg
+        print 
+
+
+
+package examples;
+
+public class PrintfindAvg {
+	public static void main(String[] args) {
+		PrintfindAvg pf = new PrintfindAvg();
+		pf.findAvg(10, 20, 30);
+	}
+
+	public void findAvg(int a, int b, int c) {
+		int sum = a + b + c;
+		int avg = sum / 3;
+		System.out.println(avg);
+	}
+}
+
+
+
+
+
+
+Analysis of Algorithm
+---------------------
+find best algorithm which runs fast and takes in less memory
+
+        Time Complexity (How Much Time to Complete)
+
+        Space Complexity (How Much Memory to Complete)
+
+
+
+package examples;
+
+public class PrintsumOfn {
+
+	public static void main(String[] args) {
+		PrintsumOfn sum = new PrintsumOfn();
+		System.out.println(sum.findSumOne(20));
+		System.out.println(sum.findSumTwo(20));
+	}
+
+	public int findSumOne(int n) {
+		return n * (n + 1) / 2;
+	}
+
+	public int findSumTwo(int n) {
+		int sum = 0;
+		for (int i = 1; i <= n; i++) {
+			sum = sum + i;
+		}
+		return sum;
+	}
+}
+
+n no of loops TIme Complexity is More in this algorithm
+
+
+
+
+
+
+Time Complexity
+---------------
+its amount of time taken by algorithm to run
+
+the input processed by an algorithm helps in determining the time complexity
+
+
+
+
+
+package examples;
+
+public class PrintsumOfn {
+
+	public static void main(String[] args) {
+		long now = System.currentTimeMillis();
+		
+		PrintsumOfn sum = new PrintsumOfn();
+		
+		System.out.println(sum.findSumOne(9999));
+		System.out.println("Time Taken - "+(System.currentTimeMillis() - now)+" millisecs");
+		
+		System.out.println(sum.findSumTwo(9999));
+		System.out.println("Time Taken - "+(System.currentTimeMillis() - now)+" millisecs");
+	}
+
+	public int findSumOne(int n) {
+		return n * (n + 1) / 2;
+	}
+
+	public int findSumTwo(int n) {
+		int sum = 0;
+		for (int i = 1; i <= n; i++) {
+			sum = sum + i;
+		}
+		return sum;
+	}
+}
+
+
+
+
+
+
+
+Space Complexity
+-----------------
+its amount of memory or space taken by algorithm to run
+
+the memory required to process the input by an algorithm helps in determining the space complexity
+
+
+
+
+
+Asymptotic Analysis of algorithm
+--------------------------------
+Asymptotic Analysis helps in evaluating performance of an algorithm in terms of input size and its increase
+
+we don't measure actual running time of algorithm
+
+it helps in determining how time and space taken by algorithm increases with input size
+
+
+
+
+
+
+
+
+Asymptotic Notations
+--------------------
+Asymptotic Analysis helps us determining Run Time Complexity and Space Complexity of Given Algorithm
+
+are the mathematical tools used to describe the running time of an algorithm in terms of input size
+
+ex - performance of car in 1 litre of petrol
+
+        Highway (min traffic) - 25 km/litre
+        City (max traffic) - 15 km/litre
+        City + Highway (avg traffic) - 20 km/litre
+
+
+
+
+Asymptotic Notations helps us in determining
+
+        Best Case
+        Average Case
+        Worst Case
+
+
+
+
+
+Types of Asymptotic Notations
+-----------------------------
+There are Three Types of Notations
+
+        Omega (Ω) Notation
+        Big O (O) Notation
+        Theta (θ) Notation
+
+
+
+Omega (Ω) Notation
+------------------
+it is the formal way to express the lower bound of an algorithm running time
+
+lower bound means for any given input this notation determines best amount of time an algorithm can take to complete
+
+Ex - algorithm takes 100 secs best amount of time 
+
+
+
+Big O (O) Notation
+------------------
+it is the formal way to express the upper bound of an algorithm running time
+
+upper bound means for any given input this notation determines longest amount of time an algorithm can take to complete
+
+Ex - algorithm takes 100 secs longest amount of time
+
+opposite to Omega Notation
+
+this is mostly used to find the max amount of time to take complete
+
+Big O (O) Notation is the Worst Case Analysis of an Algorithm 
+
+
+
+
+
+
+
+Theta (θ) Notation
+------------------
+it is the formal way to express the both lower bound and upper bound of an algorithm running time
+
+determines average amount of time an algorithm can take to complete
+
+Ex - 100 secs for first run
+     120 secs for second run
+     110 secs for third run 
+
+it is rarely used because rare use cases to determine avg time
+
+
+
+
+
+
+
+
+
+Analysis of Time Complexity (Big O Notation)
+---------------------------------------------
+it gives upper bound 
+
+Rules
+-----
+it is a single processor
+
+performs in sequential of statements
+
+assignment operation takes 1 unit of time
+
+return statement takes in 1 unit of time
+
+arithmetical operation takes in 1 unit of time
+
+logical operation takes in 1 unit of time
+
+other small/single operation takes in 1 unit of time
+
+drop lower order terms
+
+        T = n2 + 3n + 1 = O(n2) 
+
+        n - large (drop lower order terms - n2)
+
+
+drop constant multipliers
+
+        T = 3n2 + 6n + 1 = O(n2)
+
+
+
+
+
+Calculating TIme Complexity of COnstant Algorithm
+--------------------------------------------------
+
+public int sum(int x,int y){
+  int result = x + y;
+  return result;
+}
+
+
+line no       operations          unit time
+
+   2            1+1+1+1              4
+   3              1+1                2
+
+
+total time taken is 6 units
+
+T = C (constant)
+
+
+
+
+
+
+
+public int get(int[] arr,int){
+  return arr[i];
+}
+
+
+Time Complexity O(1)
